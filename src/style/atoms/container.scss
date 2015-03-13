@@ -1,0 +1,6 @@
+@import '../values/sizes';
+
+.container {
+  margin: 0 auto;
+  max-width: $container;
+}

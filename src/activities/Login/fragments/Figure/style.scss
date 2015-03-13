@@ -1,0 +1,26 @@
+$figure-size   : 32 * 8px;
+$figure-easing : cubic-bezier(.48,-0.01,.47,1.36);
+
+@keyframes figure {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.9);
+  }
+
+  1000% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.figure {
+  display: block;
+  width: 100%;
+}
+
+.figure img {
+  animation: 0.4s figure $figure-easing;
+  height: $figure-size;
+  object-fit: cover;
+  width: $figure-size;
+}

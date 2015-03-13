@@ -1,0 +1,16 @@
+.login-exit {
+
+  .figure img {
+    border-radius: 0;
+    height: 400px;
+    margin-top: 0;
+    transition: 0.4s all ease-out;
+    width: 100%;
+  }
+
+  .uploader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+
+}

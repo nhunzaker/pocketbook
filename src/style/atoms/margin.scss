@@ -1,0 +1,40 @@
+/**
+ * Utilitize for manipulating margin.
+ */
+
+@import "../values/metrics";
+
+@for $i from 0 through 10 {
+  .margin-#{ $i } {
+    margin: $unit * $i;
+  }
+}
+
+@for $i from 0 through 10 {
+  .margin-#{ $i }-left {
+    margin-left: $unit * $i;
+  }
+}
+
+@for $i from 0 through 10 {
+  .margin-#{ $i }-right {
+    margin-right: $unit * $i;
+  }
+}
+
+@for $i from 0 through 10 {
+  .margin-#{ $i }-top {
+    margin-top: $unit * $i;
+  }
+}
+
+@for $i from 0 through 10 {
+  .margin-#{ $i }-bottom {
+    margin-bottom: $unit * $i;
+  }
+}
+
+.margin-center {
+  margin-right: auto;
+  margin-left: auto;
+}

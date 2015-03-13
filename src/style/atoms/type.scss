@@ -1,0 +1,75 @@
+/**
+ * Basic typographic types
+ */
+
+@import '../generators/functions';
+
+.type-display-4 {
+  font-size: 112px;
+  font-weight: 300;
+  letter-spacing: tracking(-10);
+}
+
+.type-display-3 {
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: tracking(-5);
+}
+
+.type-display-2 {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.type-display-1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.type-headline {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.type-title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: tracking(5);
+}
+
+.type-subhead {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.type-body-2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: tracking(10);
+}
+
+.type-body-1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: tracking(10);
+}
+
+.type-caption {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: tracking(20);
+}
+
+.type-button {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: tracking(10);
+  line-height: 24px;
+}

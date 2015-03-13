@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/microcosm/store.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../prettify.css">
+
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">lib/microcosm/store.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">62.75% <small>(32 / 51)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">36.67% <small>(11 / 30)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">66.67% <small>(12 / 18)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">94.74% <small>(18 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">lib/microcosm/</a> &#187; store.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage"><span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* REACT HOT LOADER */ <span class="missing-if-branch" title="if path not taken" >I</span>if (module.hot) { <span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >var ReactHotAPI = require("/Users/nate/Development/web/pocketbook/node_modules/react-hot-loader/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/nate/Development/web/pocketbook/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); <span class="cstat-no" title="statement not covered" ></span>module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(<span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return RootInstanceProvider.getRootInstances(ReactMount); </span>}, React); </span>})(); </span>} (function () {
+&nbsp;
+"use strict";
+&nbsp;
+var _createClass = (function () { function defineProperties(target, props) { for (var key in props) { var prop = props[key]; prop.configurable = true; if (prop.value) prop.writable = true; } Object.defineProperties(target, props); } return function (Constructor, protoProps, staticProps) { <span class="missing-if-branch" title="else path not taken" >E</span>if (protoProps) defineProperties(Constructor.prototype, protoProps); <span class="missing-if-branch" title="if path not taken" >I</span>if (staticProps) <span class="cstat-no" title="statement not covered" >defineProperties(Constructor, staticProps); </span>return Constructor; }; })();
+&nbsp;
+var _classCallCheck = function (instance, Constructor) { <span class="missing-if-branch" title="if path not taken" >I</span>if (!(instance instanceof Constructor)) { <span class="cstat-no" title="statement not covered" >throw new TypeError("Cannot call a class as a function"); </span>} };
+&nbsp;
+/**
+ * Store
+ * The basic state container for Microcosm. Store observes
+ * changes, by assignment, to an immutable data structure.
+ */
+&nbsp;
+var Store = (function () {
+  function Store(constants, seed, flux) {
+    _classCallCheck(this, Store);
+&nbsp;
+    this._tasks = this.register(constants);
+    this.state = this.getInitialState(seed);
+  }
+&nbsp;
+  _createClass(Store, {
+    getInitialState: {
+      value: function getInitialState() {}
+    },
+    register: {
+      value: function register() {}
+    },
+    all: {
+      get: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >        return this.state;</span>
+      }
+    },
+    send: {
+      value: function send(_ref) {
+        var type = _ref.type;
+        var body = _ref.body;
+&nbsp;
+        if (this._tasks &amp;&amp; type in this._tasks) {
+          this._tasks[type].call(this, body);
+        }
+      }
+    },
+    toJSON: {
+      value: function toJSON() {
+        return this.state;
+      }
+    },
+    serialize: {
+      value: function serialize() {
+        return undefined;
+      }
+    }
+  });
+&nbsp;
+  return Store;
+})();
+&nbsp;
+module.exports = Store;
+&nbsp;
+// noop
+&nbsp;
+// noop
+&nbsp;
+/* REACT HOT LOADER */ })(); <span class="missing-if-branch" title="if path not taken" >I</span>if (module.hot) { <span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >module.hot.dispose(<span class="fstat-no" title="function not covered" >function (data) {</span> <span class="cstat-no" title="statement not covered" >data.makeHot = module.makeHot; </span>}); <span class="cstat-no" title="statement not covered" ></span>if (module.exports &amp;&amp; module.makeHot) { <span class="cstat-no" title="statement not covered" >var makeExportsHot = require("/Users/nate/Development/web/pocketbook/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; <span class="cstat-no" title="statement not covered" ></span>if (makeExportsHot(module, require("react"))) { <span class="cstat-no" title="statement not covered" >foundReactClasses = true; </span>} <span class="cstat-no" title="statement not covered" ></span>var shouldAcceptModule = true &amp;&amp; foundReactClasses; <span class="cstat-no" title="statement not covered" ></span>if (shouldAcceptModule) { <span class="cstat-no" title="statement not covered" >module.hot.accept(<span class="fstat-no" title="function not covered" >function (err) {</span> <span class="cstat-no" title="statement not covered" >if (err) { <span class="cstat-no" title="statement not covered" >console.error("Cannot not apply hot update to " + "store.js" + ": " + err.message); </span>} </span>}); </span>} </span>} </span>})(); </span>}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Mar 13 2015 15:52:36 GMT-0600 (MDT)</div>
+</div>
+
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+
+<script src="../../sorter.js"></script>
+</body>
+</html>

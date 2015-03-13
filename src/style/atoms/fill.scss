@@ -1,0 +1,12 @@
+/**
+ * Fill
+ * Used to `fill` the background of an element
+ */
+
+@import '../values/colors';
+
+@each $name, $value in $colors {
+  .fill-#{$name} {
+    background: $value;
+  }
+}

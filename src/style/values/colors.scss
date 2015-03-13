@@ -1,0 +1,26 @@
+/*
+ * Colors
+ * http://www.google.com/design/spec/style/color.html#color-color-palette
+ */
+
+$colors: (
+  primary         : #673AB7,
+  primary-light   : #9575CD,
+  primary-dark    : #512DA8,
+
+  accent          : #FF4081,
+  accent-fallback : #69F0AE,
+
+  black           : black,
+  white           : white,
+
+  text-dark       : rgba(#000, 0.87),
+  icon-dark       : rgba(#000, 0.54),
+  hint-dark       : rgba(#000, 0.26),
+  divider-dark    : rgba(#000, 0.12),
+
+  text-light      : white,
+  icon-light      : rgba(#fff, 0.70),
+  hint-light      : rgba(#fff, 0.30),
+  divider-light   : rgba(#fff, 0.12)
+);

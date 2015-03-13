@@ -1,0 +1,10 @@
+@import '../values/metrics';
+
+@function unit($n, $base: $unit) {
+  @return ($n * $base);
+}
+
+@function tracking($target) {
+  // 1 unit = 1/1000 em
+  @return ($target / 1000) * 1em;
+}
