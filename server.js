@@ -22,6 +22,6 @@ var server = new WebpackDevServer(compiler, {
   historyApiFallback: true
 });
 
-server.listen(8080, "localhos", function() {
+server.listen(8080, "localhost", function() {
   console.log("Server is listening on 8080")
 });
