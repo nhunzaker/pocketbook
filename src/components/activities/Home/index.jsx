@@ -47,7 +47,7 @@ const Home = React.createClass({
           <Link to="login"><Icon type="arrow-back" /></Link>
         </Toolbar>
 
-        <Figure src={ photo } hero />
+        <Figure src={ photo } />
 
         <Container>
           <FabUploader onUpload={ this._onUpload }  />

@@ -3,28 +3,19 @@ $figure-avatar       : 32 * 8px;
 $figure-avatar-small : 8 * 8px;
 $figure-easing       : cubic-bezier(.48,-0.01,.47,1.36);
 
-@keyframes figure-in {
-  0% {
-    opacity: 0.1;
-    transform: scale(0.9);
-  }
-
-  1000% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 .figure {
   display: block;
+  height: unit(32);
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
   width: 100%;
   transform: translateZ(0);
   transition: $figure-transition all ease-out;
+  width: 100%;
 
   &:after {
+    box-shadow: inset 0 -2px 5px rgba(#000, 0.7);
     content: "";
     position: absolute;
     top: 0;
@@ -45,11 +36,15 @@ $figure-easing       : cubic-bezier(.48,-0.01,.47,1.36);
   }
 
   &.is-avatar {
-    animation: 0.4s figure-in;
+    animation: 0.4s pop;
     display: inline-block;
     margin: unit(1);
     height: $figure-avatar;
     width: $figure-avatar;
+
+    &:after {
+      opacity: 0;
+    }
 
     img {
       border-radius: 50%;
@@ -60,15 +55,6 @@ $figure-easing       : cubic-bezier(.48,-0.01,.47,1.36);
       height: $figure-avatar-small;
       width: $figure-avatar-small;
       flex-shrink: 0;
-    }
-  }
-
-  &.is-hero {
-    height: unit(32);
-    width: 100%;
-
-    &:after {
-      box-shadow: inset 0 -2px 5px rgba(#000, 0.7);
     }
   }
 }

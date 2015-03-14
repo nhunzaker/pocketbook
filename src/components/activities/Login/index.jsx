@@ -34,9 +34,7 @@ const Login = React.createClass({
   getFigure() {
     let src = this.props.user.get('photo')
 
-    return src ? (
-      <Figure src={ src } avatar={ !this.state.exiting } hero={ this.state.exiting } />
-    ) : null
+    return src ? (<Figure src={ src } avatar={ !this.state.exiting } />) : null
   },
 
   render() {
