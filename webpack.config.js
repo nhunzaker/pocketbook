@@ -15,10 +15,7 @@ module.exports = {
 
   resolve: {
     extensions: [ '', '.js', '.jsx', '.json', '.scss', '.svg' ],
-    modulesDirectories: [ 'web_modules', 'node_modules', 'src', 'lib' ],
-    alias: {
-      'react-router': 'react-router/build/npm/lib'
-    }
+    modulesDirectories: [ 'web_modules', 'node_modules', 'src', 'lib' ]
   },
 
   plugins: [

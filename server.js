@@ -17,12 +17,11 @@ var compiler = webpack(config)
 
 var server = new WebpackDevServer(compiler, {
   hot: true,
-  watchDelay: 100,
-  noInfo: true,
+  watchDelay: 300,
   stats: { colors: true },
   historyApiFallback: true
 });
 
-server.listen(8080, "localhost", function() {
+server.listen(8080, "localhos", function() {
   console.log("Server is listening on 8080")
 });

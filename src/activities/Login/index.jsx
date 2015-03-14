@@ -1,23 +1,43 @@
-import Pure      from 'Pure'
-import Figure    from './fragments/Figure'
-import Uploader  from './fragments/Uploader'
+import Figure    from 'pieces/Figure'
+import Router    from 'react-router'
+import Uploader  from 'pieces/Uploader'
 import cx        from 'classnames'
 
 import './style'
 
-class Login extends Pure {
+const EXIT_TIME = 450
+const baseClass = 'flex-grow align-center fill-primary login'
 
-  constructor() {
-    this.state = {
+const Login = React.createClass({
+  mixins: [ Router.Navigation ],
+
+  statics: {
+    willTransitionFrom(transition, component, callback) {
+      component.setState({ exiting: true })
+      setTimeout(callback, EXIT_TIME)
+    }
+  },
+
+  getInitialState() {
+    return {
       exiting: false
     }
-  }
+  },
 
   getClassName() {
-    return cx('flex-grow align-center fill-primary', cx({
-      'login-exit': this.state.exiting
-    }))
-  }
+    return cx({
+      [baseClass]  : true,
+      'login-exit' : this.state.exiting
+    })
+  },
+
+  getFigure() {
+    let src = this.props.user.get('photo')
+
+    return src ? (
+      <Figure src={ src } avatar={ !this.state.exiting } hero={ this.state.exiting } />
+    ) : null
+  },
 
   render() {
     let { flux, user } = this.props
@@ -25,16 +45,15 @@ class Login extends Pure {
 
     return (
       <main className={ this.getClassName() }>
-        <Figure src={ src } />
-        <Uploader src={ src } onUpload={ flux.actions.user.set } onConfirm={ this.onConfirm.bind(this) }/>
+        { this.getFigure() }
+        <Uploader src={ src } onUpload={ flux.actions.user.login } onConfirm={ this.onConfirm } />
       </main>
     )
-  }
+  },
 
   onConfirm() {
-    this.setState({ exiting: true })
+    this.transitionTo('home')
   }
-
-}
+})
 
 export default Login

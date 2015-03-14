@@ -1,0 +1,43 @@
+.home {
+  .gallery {
+    transition: 0.3s transform;
+  }
+
+  .fab {
+    animation: 0.4s pop;
+    position: absolute;
+    top: -28px;
+    right: 0;
+  }
+
+  .toolbar .icon {
+    animation: 0.5s spin-in
+  }
+
+  .home-body {
+    animation: 0.6s swipe-down;
+  }
+}
+
+.home-exit {
+  .home-body {
+    transition: 0.3s all;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .fab {
+    opacity: 0;
+    transform: scale(0.75);
+    transition: 0.2s all;
+  }
+
+  .toolbar .icon {
+    animation: 0.5s spin-out;
+    opacity: 0;
+  }
+
+  .figure {
+    opacity: 0;
+  }
+}

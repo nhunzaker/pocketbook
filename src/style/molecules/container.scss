@@ -1,14 +1,10 @@
 .container {
   padding-left: unit(4);
   padding-right: unit(4);
-
-  @include min-width($bp-medium) {
-    padding-left: unit(8);
-    padding-right: unit(8);
-  }
 }
 
 .container-inner {
   margin: 0 auto;
   max-width: 768px;
+  position: relative;
 }

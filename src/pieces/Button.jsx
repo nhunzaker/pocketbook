@@ -1,10 +1,17 @@
-import Ink  from 'react-ink'
-import Pure from 'Pure'
-import cx   from 'classnames'
+import Ink from 'react-ink'
+import cx  from 'classnames'
 
 let baseClass = 'type-button relative pad-2 inline-block'
 
-class Button extends Pure {
+let Button = React.createClass({
+
+  getDefaultProps() {
+    return {
+      className : '',
+      element   : 'button',
+      radius    : 2
+    }
+  },
 
   render() {
     let { children, className, fill, color, element, pad, radius, shadow, ...other } = this.props
@@ -15,7 +22,7 @@ class Button extends Pure {
       [`radius-${radius}`] : radius,
       [`fill-${fill}`]     : fill,
       [`color-${color}`]   : color,
-      [`shadow-${shadow}`] : shadow,
+      [`shadow-${shadow}`] : shadow
     })
 
     return React.createElement(element, {
@@ -24,12 +31,6 @@ class Button extends Pure {
     }, [(<Ink key="__ink__"/>), children ])
   }
 
-}
-
-Button.defaultProps = {
-  className : '',
-  element   : 'button',
-  radius    : 2
-}
+})
 
 export default Button
