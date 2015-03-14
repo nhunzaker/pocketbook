@@ -1,6 +1,15 @@
-import Pure from 'Pure'
+let Icon = React.createClass({
 
-class Icon extends Pure {
+  statics: {
+    prefix: 'icon-'
+  },
+
+  getDefaultProps() {
+    return {
+      height : 24,
+      width  : 24
+    }
+  },
 
   getSymbol() {
     let { type, width, height } = this.props
@@ -8,7 +17,7 @@ class Icon extends Pure {
     return {
       __html: `<use xlink:href="#${ Icon.prefix + type }" width="${ width }" height="${ height }"></use>`
     }
-  }
+  },
 
   render() {
     return (
@@ -17,13 +26,6 @@ class Icon extends Pure {
       </svg>
     )
   }
-}
-
-Icon.prefix = 'icon-'
-
-Icon.defaultProps = {
-  height : 24,
-  width  : 24
-}
+})
 
 export default Icon

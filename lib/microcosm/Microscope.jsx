@@ -3,9 +3,6 @@ import React     from 'react/addons'
 import transpose from './transpose'
 
 let Microscope = React.createClass({
-
-  mixins: [ Pure ],
-
   propTypes: {
     flux  : React.PropTypes.object.isRequired,
     watch : React.PropTypes.array.isRequired

@@ -1,20 +1,22 @@
-import Store   from 'microcosm/store'
-import { Map } from 'immutable'
+import Store     from 'microcosm/store'
+import Immutable from 'immutable'
+import MD5       from 'MD5'
 
 class User extends Store {
 
   getInitialState() {
-    return Map({ photo: null })
+    return Immutable.Map()
   }
 
   register({ user }) {
     return {
-      [user.set]: this.set
+      [user.login]: this.login
     }
   }
 
-  set(params) {
-    this.state = this.state.merge(params)
+  login(photo) {
+    let id = MD5(photo)
+    this.state = this.state.merge({ id, photo })
   }
 
 }

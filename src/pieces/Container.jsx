@@ -1,7 +1,18 @@
-import Pure from 'Pure'
-import cx   from 'classnames'
+import cx from 'classnames'
 
-class Container extends Pure {
+let Container = React.createClass({
+
+  propTypes: {
+    className: React.PropTypes.string
+  },
+
+  getDefaultProps() {
+    return {
+      element: 'div',
+      className: '',
+      fill: false
+    }
+  },
 
   render() {
     let { bottom, children, className, element, fill, color, top, ...rest } = this.props
@@ -18,16 +29,6 @@ class Container extends Pure {
       ...rest
     }, (<div className="container-inner">{ children }</div>))
   }
-}
-
-Container.propTypes = {
-  className: React.PropTypes.string
-}
-
-Container.defaultProps = {
-  element: 'div',
-  className: '',
-  fill: false
-}
+})
 
 export default Container

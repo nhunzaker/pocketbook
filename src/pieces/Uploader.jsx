@@ -1,9 +1,13 @@
-import Pure     from 'Pure'
-import Button   from 'pieces/Button'
-import Icon     from 'pieces/Icon'
+import Button   from './Button'
+import Icon     from './Icon'
 import readFile from 'readFile'
 
-class Uploader extends Pure {
+let Uploader = React.createClass({
+
+  propTypes: {
+    onUpload  : React.PropTypes.func.isRequired,
+    onConfirm : React.PropTypes.func.isRequired
+  },
 
   getConfirmation() {
     return (
@@ -11,7 +15,7 @@ class Uploader extends Pure {
         <Icon type="done" />
       </Button>
     )
-  }
+  },
 
   render() {
     let { src } = this.props
@@ -21,27 +25,22 @@ class Uploader extends Pure {
         <input className="hide-visually"
                id="camera"
                type="file"
-               onChange={ this._onChange.bind(this) }
+               onChange={ this._onChange }
                accept="image/*;capture=camera" />
 
         <Button element="label" htmlFor="camera" fill="accent" color="white" shadow="1">
-          { src ? 'I found something new' : 'Snap something you love' }
+          { src ? 'I changed my mind' : 'Take a photo to begin' }
         </Button>
 
         { src && this.getConfirmation() }
       </div>
     )
-  }
+  },
 
   _onChange(e) {
-    readFile(e.target.files[0], photo => this.props.onUpload({ photo }))
+    readFile(e.target.files[0], this.props.onUpload)
   }
 
-}
-
-Uploader.propTypes = {
-  onUpload  : React.PropTypes.func.isRequired,
-  onConfirm : React.PropTypes.func.isRequired
-}
+})
 
 export default Uploader

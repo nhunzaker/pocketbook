@@ -1,0 +1,5 @@
+@import '../values/colors';
+
+.ruled-bottom {
+  border-bottom: 1px solid map-get($colors, 'divider-dark');
+}

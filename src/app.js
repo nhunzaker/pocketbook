@@ -2,15 +2,17 @@ import Microcosm from 'microcosm'
 
 class App extends Microcosm {
 
-  constructor() {
-    super()
+  constructor(seed) {
+    super(seed)
 
     this.addActions({
-      user: require('actions/user')
+      user   : require('actions/user'),
+      photos : require('actions/photos')
     })
 
     this.addStores({
-      user: require('stores/user')
+      user   : require('stores/user'),
+      photos : require('stores/photos')
     })
   }
 

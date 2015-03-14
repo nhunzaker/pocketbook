@@ -1,6 +1,6 @@
 export default {
 
-  login(photo) {
+  add(photo) {
     return photo
   }
 
